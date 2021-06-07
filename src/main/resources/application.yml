@@ -1,0 +1,21 @@
+server:
+  port: 8080 #porta de conexão da aplicação
+  servlet:
+    context-path: /bootcamp
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver #driver do banco a ser usado
+    url: jdbc:postgresql://localhost:5432/postgres
+    #↑ responsável por executar o Postgre, os textos de estrutura mudam conforme o banco
+    username: postgres #usuario do banco
+    password: 123456 #senha do banco
+  jpa:
+    show-sql: true #mostra os comaandos sql no terminal
+    database-platform: org.hibernate.dialect.PostgreSQLDialect #dialeto do banco de dados
+    generate-ddl: false #gera tabelas automaticamente, é importante deixar falso
+    hibernate:
+      auto-ddl: none #pede ao hibernate que não gere nada automaticamente
+
+application:
+  description: Projeto criado na devweek DIO - santander
