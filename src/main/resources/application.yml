@@ -1,19 +1,21 @@
-server:
-  port: 8080 #porta de conexão da aplicação
+\server:
+  port: 5432 #porta de conexão da aplicação
   servlet:
     context-path: /bootcamp
 
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver #driver do banco a ser usado
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: postgres://elzzblieycdkaw:1803cc23ae2450a57b7d0e1b96ee655e0c266d4c5cbdc1e2824e986194989101@ec2-18-214-140-149.compute-1.amazonaws.com:5432/d6cftc357n9u12
+
     #↑ responsável por executar o Postgre, os textos de estrutura mudam conforme o banco
-    username: postgres #usuario do banco
-    password: 123456 #senha do banco
+    username: elzzblieycdkaw #usuario do banco
+    password: 1803cc23ae2450a57b7d0e1b96ee655e0c266d4c5cbdc1e2824e986194989101
+ #senha do banco
   jpa:
     show-sql: true #mostra os comaandos sql no terminal
     database-platform: org.hibernate.dialect.PostgreSQLDialect #dialeto do banco de dados
-    generate-ddl: false #gera tabelas automaticamente, é importante deixar falso
+    generate-ddl: true #gera tabelas automaticamente, é importante deixar falso. Esta true por conta do heroku
     hibernate:
       auto-ddl: none #pede ao hibernate que não gere nada automaticamente
 
